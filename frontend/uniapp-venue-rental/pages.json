@@ -1,0 +1,128 @@
+{
+	"easycom": {
+		"autoscan": true,
+		// 注意一定要放在custom里，否则无效，https://ask.dcloud.net.cn/question/131175
+		"custom": {
+			"^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+		    "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
+		}
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "场地租赁APP"
+			}
+		},
+		{
+			"path" : "pages/login/index",
+			"style" : {
+				"navigationBarTitleText" : "登录"
+			}
+		},
+		{
+			"path" : "pages/mine/index",
+			"style" : {
+				"navigationBarTitleText" : "我的",
+				"navigationBarBackgroundColor": "#F2F2F2"
+			}
+		},
+		{
+			"path" : "pages/register/index",
+			"style" : {
+				"navigationBarTitleText" : "注册"
+			}
+		},
+		{
+			"path" : "pages/search/index",
+			"style" : 
+			{
+				"navigationBarTitleText" : "搜索结果"
+			}
+		},
+		{
+			"path" : "pages/fieldDetail/index",
+			"style" : {
+				"navigationBarTitleText" : "场馆详情"
+			}
+		},
+		{
+			"path" : "pages/CreateOrder/index",
+			"style" : {
+				"navigationBarTitleText" : "创建订单"
+			},
+			"needLogin": true // 表示是否需要登录才可访问，默认false
+		},
+		{
+			"path" : "pages/userInfo/index",
+			"style" : {
+				"navigationBarTitleText" : "个人信息",
+				"backgroundColor": "#f5f6f8"
+			},
+			"needLogin": true
+		},
+		{
+			"path" : "pages/mineOrder/index",
+			"style" : {
+				"navigationBarTitleText" : "我的订单",
+				"backgroundColor": "#f5f6f8"
+			},
+			"needLogin": true
+		},
+		{
+			"path" : "pages/mineCollect/index",
+			"style" : {
+				"navigationBarTitleText" : "我的收藏",
+				"backgroundColor": "#f5f6f8"
+			},
+			"needLogin": true
+		},
+		{
+			"path" : "pages/awaitOrder/index",
+			"style" : {
+				"navigationBarTitleText" : "待付款订单",
+				"backgroundColor": "#f5f6f8"
+			},
+			"needLogin": true
+		},
+		{
+			"path" : "pages/baiduMap/index",
+			"style" : 
+			{
+				"navigationBarTitleText" : "百度地图"
+			},
+			"needLogin": false
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "场地租赁APP",
+		"navigationBarBackgroundColor": "#F2F2F2",
+		"enablePullDownRefresh": true, // 开启下拉刷新
+		"backgroundColor":"#F8F8F8", // 设置 下拉刷新区的背景颜色
+		"backgroundTextStyle":"dark" , // 下拉 loading 的样式。仅支持 dark / light
+		"onReachBottomDistance": 50  // 页面上拉 触底事件 触发时 距页面底部距离 .单位只支持 px. 默认为 50px
+	},
+	"tabBar": {
+		"color": "black",
+		"selectedColor": "skyblue",
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home_active.png"
+			},
+			{
+				"pagePath": "pages/mine/index",
+				"text": "我的",
+				"iconPath": "static/tabbar/mine.png",
+				"selectedIconPath": "static/tabbar/mine_active.png"
+			}
+		]
+	},
+	"uniIdRouter": {}
+}
