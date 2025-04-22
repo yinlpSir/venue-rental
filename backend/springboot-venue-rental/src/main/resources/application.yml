@@ -1,0 +1,73 @@
+spring:
+  application:
+    name: FieldRental
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
+      host: localhost
+      port: 27017
+      db: test
+    stomp:
+      port: 61613
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/field?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 135798462
+    jackson:
+      date-format: dd/MM/yyyy HH:mm:ss.SSS
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 3312988295@qq.com
+    password: cfzpmwstjhxbchdf    # 授权码
+    default: UTF-8
+    socketFactoryClass: javax.net.ssl.SSLSocketFactory   # 加密工厂
+    debug: true
+    from: 3312988295@qq.com
+    protocol: smtp     #使用的协议
+    smtp:
+      ssl:
+        enable: true    # 是否开启 ssl 认证协议
+      socketFactory:
+        port: 587       #使用默认接口即可
+      auth: true
+      starttls:
+        enable: true
+        required: true
+  redis:
+    host: localhost
+    port: 6379
+  alipay:
+    url: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+    appId: 9021000137633014
+    privateKey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC04O1NxCnKLDsfUqq6toEPo6oQdZZBhQ2Qu0Y6nq7hS1BCM7gYsIugN+NcR/ad8KjEhMQupIdLM+/aYMH/d4leTK0mxGLGtOJ2ES29QxSiISGeVGW8+RSjnWSVrdxox8WYQsSa0a8WuxceSWnZJrCcb6yQRSw5TCSyfXPgLr1yV8xlVhuvfga5g5QDBU2ikGGx8SZP+YBXqH/ul/fZj7mAxGLxkf7HJboBbsdJT/79dbBSTBmvksmVRW/eX0EQCxPGm+N1okJeOkXL7ExaUsxlRvBbWqk3KQo1Uc6RD1fg+e1F7YOG3f1BegK6X8cyrzVQDSgKWvNlAaaD7fB/iFHTAgMBAAECggEAQ2rOqDykQtmnk64xOnSJuDWNTqM1ROh9vONActrwXcK/gF1ckb9D24zZLm0YK5gmn1DI+oWSc+JA1QlZZYm9Zqt3okpycpO7ELyoarGVADUPHb9hSEUifzVL50otK9TB/lVsiDP9aaCEJmLAlBKKo1QwYnmV2SlbSDfgN7/UFsimJrQuu9KsKGr7T9m+tnfUcLH77pkq1wUmB0hd20gI6vRIoxLg6460xhmhoJcY2iCqA60Bt0mwHTP87YCs4ZSIeHMFFsV49Zn05yBR/XbuwrEYyYoxmzUO9UJAvYyzacz7ow9eRBQGFdRyK0PuJiDQI1SAhZ5cWQTaRqb4KSqDMQKBgQD96LK6Pulso5StdGYiMv/whv75YWEaDPsVUO38SIkIuBLTYJAmSzpDO7S8PwLeN7rH9mD5d91qfdBlkyRmc96NbqN7yP5kX7qXCQmeBbiZTsboCj3A+1lYlUSG7nEWkbH9MmOsQyFT0MS7TefrPrSfl2NSiOFIP+FZPiJdNzYdWwKBgQC2XkNYjXBPJAnA9LV3NJjOZOhWqHihJYZzV2PbsH0lcHK5zERyidzEaWmvCuwpF2BAm/vWccENe8Bu9iqNnqnzjC11605Mkey5Uw8wbxuLPafaLSJzHPYKCGwKt0Jy6vB50+RgPydxZ3WBx9AJCcyNkPUq0uhfDgPlu79Tb4fu6QKBgQD35WYCAoRB5h+1jcxdnW9WdWahMdrs5TmK4T3JL0RjN9xhdYinapESrUtS8y4oqT56Fmkth0KswvNhCFzkjkH90cRZia4db30sEs3J84n8W/ZE/CK4tG3R18JU/p14zHx7WOQJfm0eeNhqirBgdBNDMTnujedtc7jfOZOxcMMruwKBgFNa5IdeJp5Vx4uFjkgNJ2b3Imcxm+l0IG8p23+3vIvXSOj5n7OGpfy0fdS/NlBV2e3OHh7XYbkK/lr5c1vF0MJ8KO9D/UbsT/opJ8Eol7teFBGaHavl6eOOE+wV9W5XSlE086a2Vw3zjvch4EmxS+jM//Jx8jo4Srm/xeSaDtS5AoGAJyu9vGX66nOxUlD74dBGileBaciu+88KsTzx6FTBUlO2xAZ46IXi73fs5+2gaV3VZ072FZepnPb/+K+8wrhA/OgzxzsSOmvD20hKFCRI/dfsXG1oDZOi84m1FXNZEb+bVZXB3H5O5AHl4usqBaErv9LlK30jNl7JWLC8N007/Qs=
+    publicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtODtTcQpyiw7H1KquraBD6OqEHWWQYUNkLtGOp6u4UtQQjO4GLCLoDfjXEf2nfCoxITELqSHSzPv2mDB/3eJXkytJsRixrTidhEtvUMUoiEhnlRlvPkUo51kla3caMfFmELEmtGvFrsXHklp2SawnG+skEUsOUwksn1z4C69clfMZVYbr34GuYOUAwVNopBhsfEmT/mAV6h/7pf32Y+5gMRi8ZH+xyW6AW7HSU/+/XWwUkwZr5LJlUVv3l9BEAsTxpvjdaJCXjpFy+xMWlLMZUbwW1qpNykKNVHOkQ9X4PntRe2Dht39QXoCul/HMq81UA0oClrzZQGmg+3wf4hR0wIDAQAB
+    notifyUrl:  http://anitsunat.natapp1.cc/alipay/notify
+
+logging:
+  file:
+    path: /var/log
+    file: Rental.log
+  level:
+    root: WARN
+    org:
+      springframework:
+        security: DEBUG
+
+#springdoc:
+#  api-docs:
+#    path: /api-docs
+#  swagger-ui:
+#    path: /swagger-ui.html
+
+jwt:
+  secret: th1sAuth8yWande2e2An1tsusSp21ngb00tSub7ectW1shY0uHaveFunny

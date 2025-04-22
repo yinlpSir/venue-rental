@@ -1,0 +1,13 @@
+package com.example.fieldrental.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Position {
+    private double lng;
+    private double lat;
+}
